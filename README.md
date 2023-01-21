@@ -1,4 +1,4 @@
-# webpack-threejs-started
+# webpack-threejs-3DModel
 
 
 ## `Step by step to run this project`
@@ -6,7 +6,7 @@
 ### `clone`
 You can clone by using git clone on your terminal:
 
-    git clone https://github.com/tonbots/webpack-threejs-started.git
+    git clone https://github.com/tonbots/webpack-threejs-3dModel.git
 
 You can clone by click on the GitHub green button "CODE" and download the .zip
 
