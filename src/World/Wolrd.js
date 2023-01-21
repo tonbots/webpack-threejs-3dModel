@@ -1,13 +1,14 @@
 import createCamera from "./components/camera";
-import createCube from "./components/cube";
 import createLights from "./components/lights";
 import createScene from "./components/scene";
 import createControls from "./systems/controls";
 import Loop from "./systems/Loop";
 import createRenderer from "./systems/renderer";
 import Resizer from "./systems/Resize";
+import loadBirds from "./components/birds/birds";
 
 // from outside the module
+let controls;
 let camera;
 let renderer;
 let scene;
@@ -21,22 +22,24 @@ class World {
     loop = new Loop(camera, scene, renderer);
     container.append(renderer.domElement);
 
-    const controls = createControls(camera, renderer.domElement);
+    controls = createControls(camera, renderer.domElement);
 
-    controls.addEventListener('change', () => {
-      this.render();
-      });
-
-    const cube = createCube();
     const { ambientLight, mainLight } = createLights();
 
     // loop.updatables.push(cube);
     loop.updatables.push(controls);
 
-    controls.target.copy(cube.position);
-    scene.add(cube, ambientLight, mainLight);
+    scene.add(ambientLight, mainLight);
 
     const resizer = new Resizer(container, camera, renderer);
+  }
+
+  async init() {
+    const { parrot, flamingo, stork } = await loadBirds();
+
+    controls.target.copy(parrot.position);
+
+    scene.add(parrot, flamingo, stork);
   }
 
   render() {

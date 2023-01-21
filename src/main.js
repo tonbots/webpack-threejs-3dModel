@@ -1,7 +1,7 @@
 import "./main.css";
 import World from "./World/Wolrd";
 
-function main() {
+async function main() {
   // Get a reference to the container element
   const container = document.querySelector("#scene-container");
 
@@ -9,9 +9,11 @@ function main() {
   const world = new World(container);
 
   // produce a single frame (render on demand)
-  world.render();
+  await world.init();
 
   // start the loop (produce a stream of frames)
   world.start();
 }
-main();
+main().catch((err) => {
+  console.error(err);
+});
