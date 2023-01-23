@@ -1,5 +1,6 @@
 # webpack-threejs-3DModel
 
+![GIF](static/preview.gif)
 
 ## `Step by step to run this project`
 
