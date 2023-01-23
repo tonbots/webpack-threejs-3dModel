@@ -27,7 +27,7 @@ class World {
     const { ambientLight, mainLight } = createLights();
 
     // loop.updatables.push(cube);
-    loop.updatables.push(controls);
+    // loop.updatables.push(controls);
 
     scene.add(ambientLight, mainLight);
 
@@ -38,6 +38,8 @@ class World {
     const { parrot, flamingo, stork } = await loadBirds();
 
     controls.target.copy(parrot.position);
+
+    loop.updatables.push(parrot, flamingo, stork);
 
     scene.add(parrot, flamingo, stork);
   }

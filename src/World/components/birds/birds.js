@@ -11,6 +11,8 @@ async function loadBirds() {
     loader.loadAsync(Stork),
   ]);
 
+  // console.log("Data", parrotData);
+
   const parrot = setupModel(parrotData);
   parrot.position.set(0, 0, 2.5);
 
