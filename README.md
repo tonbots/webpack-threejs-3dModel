@@ -1,4 +1,4 @@
-# webpack-threejs-3DModel
+# webpack-threejs-3DAnimation
 
 ![GIF](static/preview.gif)
 
