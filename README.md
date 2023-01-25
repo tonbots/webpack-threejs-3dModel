@@ -17,7 +17,7 @@ This project depends on some dependencies, so the command **npm install** takes 
     npm install
 
 
-### `npm start`
+### `npm run dev`
 Runs the app in the development mode.\
 Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
