@@ -1,6 +1,13 @@
 # webpack-threejs-3DAnimation
 
+## `Preview Project 👇`
+
 ![GIF](static/preview.gif)
+
+## `Built with`
+- Nodejs
+- Webpack
+- Three.js
 
 ## `Step by step to run this project`
 
